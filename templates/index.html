@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+{% load static %}
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=0.08">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" type='text/css' href="{% static '/css/style.css'%}">
+  <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai|Bree+Serif&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav id="navbar">
+        <div id="logo">
+		<ul>
+		    <center>
+		    <img src='{% static "Images/br.gif"%}' alt="Logo" align="middle">
+			<img src='{% static "Images/p.png"%}' alt="Logo" align="middle">
+			</center>
+	
+            <li class="item"><a href="">Home</a>
+			</li>
+            <li class="item"><a href="#form">Form</a></li>
+            <li class="item"><a href="#Hopitaux-container">Hopitaux</a></li>
+            <li class="item"><a href="#client-section">Détection Précoce Auto Palpation </a></li>
+			
+        </ul>
+        </div>
+        
+    </nav>
+	
+    <section id="form">
+	     <h1 class="main-heading"> Breast Cancer Prediction :Cancer changes your life, often for the better</h1>
+             <div class="container">
+             <h2 class="h-primary center"> Fill the details</h2>
+             <div id="form-box">
+             <div class="row">
+             <form class="form" action="{% url 'result' %}">
+             <p style="text-align: center;color: white;font-weight: bold;padding: .5rem;">{% csrf_token %}</p>
+
+        <ul class="ul">
+          <li>
+            <p>Texture Mean</p>
+            <input type="text" name="tm">
+          </li>
+          <li>
+            <p>Area Mean</p>
+            <input type="text" name="am">
+          </li>
+          <li>
+            <p>Smoothness Mean</p>
+            <input type="text" name="sm">
+          </li>
+          <li>
+            <p>Fractal Dimension Mean</p>
+            <input type="text" name="fdm">
+          </li>
+
+        </ul>
+        <ul class="ul">
+          <li>
+            <p>Concavity Mean</p>
+            <input type="text" name="cm">
+          </li>
+          <li>
+            <p>Symmetry Mean</p>
+            <input type="text" name="sym">
+          </li>
+
+          <li>
+            <p>Texture SE:</p>
+            <input type="text" name="tse">
+          </li>
+
+        </ul>
+
+        <ul class="ul">
+          <li>
+            <p>Symmetry SE</p>
+            <input type="text" name="syse">
+          </li>
+          <li>
+            <p>Fractal Dimension SE</p>
+            <input type="text" name="fdse">
+          </li>
+          <li>
+            <p>Smoothness Worst</p>
+            <input type="text" name="sw">
+          </li>
+        </ul>
+        <ul class="ul">
+          <li>
+            <p>Symmetry Worst</p>
+            <input type="text" name="syw">
+          </li>
+          <li>
+            <p>Concavity Worst</p>
+            <input type="text" name="cw">
+          </li>
+          <li>
+            <p>Smoothness SE</p>
+            <input type="text" name="sse">
+          </li>
+        </ul>
+        <ul class="ul">
+          <li>
+            <p>Concavity SE</p>
+            <input type="text" name="cse">
+          </li>
+          <li>
+            <p>Fractal Dimension Worst</p>
+            <input type="text" name="fdw">
+          </li>
+          <li>
+            <p>Area SE</p>
+          
+		  <input type="text" name="ase">
+          </li>
+		  
+        </ul>
+        <ul class="last">
+          <li>
+            <input class="input" type="submit" value='Get Predictions'>
+            <input class="input" type="submit" value='Get Predictions 2'>
+			
+          </li>
+        </ul>
+      </form>
+        </div>
+      </div>
+      </section>
+	<section id="Hopitaux-container">
+        <h1 class="h-primary center">Meilleurs Hopitaux et centres de cancérologie</h1>
+        <div id="Hopitaux">
+            <div class="box">
+                <img src='{% static "Images/t.jpeg"%}' alt="">
+                <h2 class="h-secondary center">Gustave Roussy</h2>
+                <p class="center">Gustave Roussy est le 5e meilleur hôpital spécialisé en cancérologie au monde et le 1er hors Etats-Unis d’après le classement World's Best Hospitals 2021 du magazine américain Newsweek paru en septembre 2020.</p>
+            </div>
+            <div class="box">
+                <img src='{% static "Images/H.png"%}' alt="">
+                <h2 class="h-secondary center">Hôpital Européen Georges Pompidou </h2>
+                <p class="center">L’Hôpital européen Georges-Pompidou, situé dans le 15ème arrondissement de Paris, répond aux besoins de santé de près de 600 000 habitants. L’hôpital est reconnu pour ses expertises des pathologies de l’adulte notamment dans les domaines cardiovasculaire et rénal, du cancer et de l’urgence.</p>
+            </div>
+            <div class="box">
+                <img src='{% static "Images/chianti.jpg"%}' alt="">
+                <h2 class="h-secondary center">Hôpital Necker Enfants Malades</h2>
+                <p class="center">Établissement de référence, il propose l’ensemble des spécialités médicales et chirurgicales pédiatriques, un service d’accueil des urgences pédiatriques, une maternité de type 3 et des services adultes très spécialisés (néphrologie, transplantation rénale, hématologie, maladies infectieuses). Il est le siège du SAMU 75, AP-HP.</p>
+            </div>
+        </div>
+    </section>
+    <section id="client-section">
+        <h1 class="h-primary center">Conseils</h1>
+		<p class="center">
+		<h2 class="h-primary center">COMMENT RÉALISER UNE AUTOPALPATION DU SEIN ?</h2>
+		<h3 class="h-primary center">ÉTAPE 1 : BIEN SE POSITIONNER</h3>
+
+         Pour pratiquer l’autopalpation mammaire dans les règles de l’art, la patiente doit se tenir debout ou assise devant un miroir. Si on nomme cet examen « autopalpation », il ne faut pas oublier que l’examen visuel reste très important dans le dépistage du cancer du sein, et que la palpation ne peut suffire.
+
+        La position de la femme lors de l’examen doit donc lui permettre de bien voir ses seins, dans 
+		une position neutre (les bras le long du corps et le dos droit) qui lui permet de repérer d’éventuelles asymétries inhabituelles. 
+         
+		<h3 class="h-primary center">ÉTAPE 2 : L’EXAMEN VISUEL DES SEINS</h3>
+	 
+         Observez méticuleusement vos seins dans le miroir à la recherche d’écoulements anormaux au niveau du mamelon, de taches, de crevasses, de plis, de croutes, de squames ou de tout élément inhabituel.
+
+         Une asymétrie progressive, un gonflement (symétrique ou non) en dehors des périodes menstruelles et prémenstruelles ou des rougeurs doivent vous alerter. 
+        <h3 class="h-primary center">ÉTAPE 3 : L’AUTOPALPATION DES SEINS</h3>
+	 
+         Lautopalpation du sein diagnostique cancerLevez ensuite le bras gauche, et palpez doucement et soigneusement votre sein gauche à l’aide de votre main droite.
+         Du bout des doigts, commencez par palper l’extérieur du sein en revenant vers l’intérieur à la recherche de masses, douleurs ou démangeaisons.
+         De la même manière, examinez aussi la zone située entre le sein et l’aisselle, puis l’aisselle elle-même.
+         Répétez ensuite l’opération sur le sein droit, toujours sans oublier l’aisselle et la zone entre le sein et cette dernière.</p>
+		 <img src='{% static "Images/d.jpg"%}' alt="Auto Palpation">
+
+    </section>
+    
+    <footer>
+        <div class="center">
+             Copyright Rabeb Kaabi Natan!
+        </div>
+    </footer>
+
+</body>
+
+</html>

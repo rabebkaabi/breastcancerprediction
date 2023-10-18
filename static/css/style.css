@@ -1,0 +1,75 @@
+.main-heading{
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    font-size: 2.5rem;
+margin-bottom: -4rem;
+margin-top: 5rem;
+}
+.container{
+    /* background-color: tomato; */
+    margin-top: -5rem;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    margin: auto;
+    padding-bottom: 30rem;
+    padding-top: 5rem;
+    /* padding-left: 5rem; */
+
+}
+.row{
+    background-color: blue;
+    
+    max-width: 100%;
+    margin: auto;
+    /* padding-left: 8rem; */
+   
+    
+}
+input{
+    padding: .5rem;
+    border-radius: 1.5rem;
+    border: none;
+    background-color: rgb(235, 235, 240);
+}
+p{
+    font-size: 1.2rem;
+    margin-bottom: .5rem;
+    padding-bottom: 0%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.ul{
+    float: left;
+    list-style: none;
+}
+.form{
+    margin: auto;
+    
+}
+.last{
+    list-style: none;
+    float: left;
+    margin: 5rem 12rem ;
+}
+.input{
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: .9rem;
+    padding-bottom: .9rem;
+    border: none;
+    border-radius: 1.5rem;
+    background-color: blue;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    word-spacing: .1rem;
+    letter-spacing: .2rem;
+    cursor: pointer;
+
+}
+.input:hover{
+    box-shadow: rgb(35, 108, 218) 0px 5px 50px 10px;
+    /* background-color: rgb(149, 169, 233);
+    color: white; */
+}
